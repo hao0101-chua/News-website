@@ -6,12 +6,11 @@
     <title>Vũ trụ & Thiên nhiên - Tin tức</title>
 
     <link rel="stylesheet" href="../../css/local-fonts.css" />
-    <link rel="stylesheet" href="../../css/root.css" />
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/article-detail.css" />
+    <link rel="stylesheet" href="../../css/components/root.css" />
+    <link rel="stylesheet" href="../../css/components/navbar.css" />
     <link rel="stylesheet" href="../../css/styles_giaitridoisong.css" />
-    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/components/footer.css" />
 
     <style>
       .page-vu-tru .tgt-card {
@@ -33,13 +32,13 @@
         padding: 1.5rem !important;
       }
       .page-vu-tru .tgt-card .text-uppercase {
-        font-size: 0.75rem;
+        font-size: 16px;
         letter-spacing: 0.18em;
         color: #6c757d;
       }
       .page-vu-tru .tgt-card h3 {
         line-height: 1.15;
-        font-size: 1.75rem;
+        font-size: 20px;
         margin-top: 0.8rem;
         margin-bottom: 1rem;
       }
@@ -60,41 +59,58 @@
       }
     </style>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../../js/cursor.js" defer></script>
+    <script src="../../js/lib/jquery/jquery-4.0.0.js" defer></script>
+    <script src="../../js/lib/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script src="../../js/auth.js" defer></script>
   </head>
 
   <body class="news-body page-vu-tru">
     <div id="news-cursor"></div>
-    <header class="news-header sticky-top" style="background: white; border-bottom: 2px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-      <nav class="navbar navbar-dark news-navbar py-0">
-        <div class="container-fluid px-3 px-xl-4">
-          <div class="news-navbar-shell w-100">
-            <span class="news-team-tag">Nhóm 7</span>
+    <header class="news-header sticky-top bg-white border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light py-0">
+        <div class="container-fluid px-3 px-xl-5">
+        <div class="d-flex align-items-center flex-grow-1" style="flex-basis: 0;">
+          <span class="news-team-tag me-4 fw-bold text-uppercase" style="font-size: 12px; color: #333;">Nhóm 7</span>
+          <ul class="navbar-nav d-none d-lg-flex flex-row gap-4">
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-dark" href="#">Kinh tế & Chính trị</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-dark" href="#">Thể thao & Sức khoẻ</a>
+            </li>
+          </ul>
+        </div>
 
-            <ul class="navbar-nav mb-0 news-main-menu news-main-menu-left">
-              <li class="nav-item"><a class="nav-link" href="./Home.html">Kinh tế & Chính trị</a></li>
-              <li class="nav-item"><a class="nav-link" href="./the-thao-suc-khoe.html">Thể thao & Sức khoẻ</a></li>
-            </ul>
+        <a class="navbar-brand mx-auto py-3 text-center" href="../Index.html" style="font-size: 24px; letter-spacing: 1px;">
+          <span class="fw-bold text-dark">BÁO CHÍ 
+            <span class="design-text">
+              <span style="color: #c30000">D</span>
+              <span style="color: #1c9a3f">E</span>
+              <span style="color: #f2c200">S</span>
+              <span style="color: #7a3bd6">I</span>
+              <span style="color: #ff8a00">G</span>
+              <span style="color: #1262ff">N</span>
+            </span>
+          </span>
+        </a>
 
-            <a class="news-logo py-3 mb-0" href="./Home.html">
-              <span>BÁO CHÍ 
-                <span aria-label="DESIGN" class="d-inline-flex">
-                  <span style="color: #c30000">D</span>
-                  <span style="color: #1c9a3f">E</span>
-                  <span style="color: #f2c200">S</span>
-                  <span style="color: #7a3bd6">I</span>
-                  <span style="color: #ff8a00">G</span>
-                  <span style="color: #1262ff">N</span>
-                </span>
-              </span>
-            </a>
-
-            <ul class="navbar-nav mb-0 news-main-menu news-main-menu-right">
-              <li class="nav-item"><a class="nav-link" href="./giai-tri-doi-song.html">Giải trí & Đời sống</a></li>
-              <li class="nav-item active"><a class="nav-link" href="./vu-tru-thien-nhien.html">Vũ trụ & Thiên nhiên</a></li>
-            </ul>
+        <div class="d-flex align-items-center justify-content-end flex-grow-1" style="flex-basis: 0;">
+          <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 me-4">
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-dark" href="#">Giải trí & Đời sống</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium text-dark" href="#">Vũ trụ & Thiên nhiên</a>
+            </li>
+          </ul>
+          
+          <div class="d-flex align-items-center gap-3">
+              <button class="btn p-0"><i class="bi bi-search"></i></button>
+              <button class="btn p-0"><i class="bi bi-person"></i></button>
+          </div>
+            <button class="navbar-toggler ms-3 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#nwMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
       </nav>
@@ -104,10 +120,12 @@
       <div class="container">
         <h1 class="text-center fw-bold mb-5">Vũ trụ & Thiên nhiên</h1>
         <section class="mb-5">
+
           <div class="text-center mb-4">
             <h2 class="h4 fw-bold text-primary">Bài Viết Nổi Bật</h2>
             <p class="text-muted">Khám phá những tin tức khoa học và thiên nhiên hấp dẫn nhất</p>
           </div>
+
           <div class="row">
             <div class="col-lg-8">
               <article class="tgt-card bg-white" style="border-radius: 24px;">
@@ -120,6 +138,7 @@
                 </div>
               </article>
             </div>
+
             <div class="col-lg-4">
               <div class="d-flex flex-column gap-3">
                 <article class="tgt-card bg-white p-3" style="border-radius: 16px;">
@@ -258,47 +277,100 @@
     </main>
 
     <footer class="footer mt-5 pt-5 pb-4">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 col-lg-5 mb-4 mb-lg-0 d-flex flex-column gap-3">
-                    <a href="./Home.html" class="text-decoration-none text-white mb-2">
-                        <span class="footer-logo-text fw-bold">BÁO CHÍ 
-                            <span aria-label="DESIGN" class="d-inline-flex">
-                            <span style="color: #c30000">D</span>
-                            <span style="color: #1c9a3f">E</span>
-                            <span style="color: #f2c200">S</span>
-                            <span style="color: #7a3bd6">I</span>
-                            <span style="color: #ff8a00">G</span>
-                            <span style="color: #1262ff">N</span></span>
-                        </span>
-                    </a>
-                    <h3 class="footer-school fw-semibold fst-italic text-uppercase mb-2">Nhóm 7 - Báo Chí Design</h3>
-                    <div class="d-flex align-items-start gap-2">
-                        <div>
-                            <span class="text-white">📍 Số 12 Nguyễn Văn Bảo, P. Hạnh Thông, Thành phố Hồ Chí Minh</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start gap-2">
-                        <div>
-                            <span class="text-white">📱 ĐT: 0283 8940 390</span>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start gap-2">
-                        <div>
-                            <span class="text-white">✉️ Email: dhcn@iuh.edu.vn</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-7">
-                    <iframe class="w-100" height="250"
-                        src="https://www.google.com/maps?q=IUH%20HCM&output=embed">
-                    </iframe>
-                </div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 col-lg-5 mb-4 mb-lg-0 d-flex flex-column gap-3">
+            <a href="../Index.html" class="text-decoration-none text-white mb-2">
+              <span class="footer-logo-text fw-bold"
+                >BÁO CHÍ
+                <span aria-label="DESIGN" class="d-inline-flex">
+                  <span style="color: #c30000">D</span>
+                  <span style="color: #1c9a3f">E</span>
+                  <span style="color: #f2c200">S</span>
+                  <span style="color: #7a3bd6">I</span>
+                  <span style="color: #ff8a00">G</span>
+                  <span style="color: #1262ff">N</span></span
+                >
+              </span>
+            </a>
+            <h3
+              class="footer-school fw-semibold fst-italic text-uppercase mb-2"
+            >
+              Đại học Công Nghiệp TP. Hồ Chí Minh
+            </h3>
+            <div class="d-flex align-items-start gap-2">
+              <div class="footer-icon">
+                <img
+                  src="../../images/footer/graduation-cap-white.png"
+                  alt="Địa chỉ"
+                  class="w-100 h-auto"
+                />
+              </div>
+              <div class="tgt-footer-text fw-light">
+                | Địa chỉ: Số 12 Nguyễn Văn Bảo, P. Hạnh Thông, Thành phố Hồ Chí
+                Minh
+              </div>
             </div>
-            <div class="row pt-4 align-items-center footer-bottom fw-light text-white">
-                <div class="col-12 text-center">© 2026 Báo Chí Design - Nhóm 7</div>
+            <div class="d-flex align-items-start gap-2">
+              <div class="footer-icon">
+                <img
+                  src="../../images/footer/phone-call-white.png"
+                  alt="Điện thoại"
+                  class="w-100 h-auto"
+                />
+              </div>
+              <div class="tgt-footer-text fw-light">| ĐT: 0283 8940 390</div>
             </div>
+            <div class="d-flex align-items-start gap-2">
+              <div class="footer-icon">
+                <img
+                  src="../../images/footer/envelope-white.png"
+                  alt="Email"
+                  class="w-100 h-auto"
+                />
+              </div>
+              <div class="tgt-footer-text fw-light">
+                | Email: dhcn@iuh.edu.vn
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="footer-map-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.858237841131!2d106.68427047460395!3d10.82215888932938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e5496d03cf%3A0xa5b8e7395ec636b9!2sIndustrial%20University%20of%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1714532679904!5m2!1sen!2s"
+                class="w-100 h-100 border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
         </div>
+        <div class="row pt-4 align-items-center footer-bottom fw-light">
+          <div class="col-12 col-md-6 d-flex flex-wrap gap-4 mb-3 mb-md-0">
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="../../images/footer/world.png"
+                alt="Truy cập"
+                style="width: 18px; height: auto"
+              />
+              <span>Số lượng truy cập: 1</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <img
+                src="../../images/footer/user.png"
+                alt="Online"
+                style="width: 18px; height: auto"
+              />
+              <span>Đang online: <b class="fw-bold">1</b></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 text-md-end text-white">
+            © 2026 Đại học Công nghiệp TP.HCM - IUH
+          </div>
+        </div>
+      </div>
     </footer>
 
   </body>
